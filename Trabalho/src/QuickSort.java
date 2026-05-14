@@ -4,7 +4,6 @@ import javax.swing.JOptionPane;
 
 public class QuickSort {
 
-    // Método QuickSort
     public static void quickSort(ArrayList<Integer> list, int inicio, int fim) {
 
         if (inicio < fim) {
@@ -16,7 +15,6 @@ public class QuickSort {
         }
     }
 
-    // Método de partição
     public static int part(ArrayList<Integer> list, int inicio, int fim) {
 
         int pivo = list.get(fim);
@@ -58,7 +56,6 @@ public class QuickSort {
             692, 993, 183, 553, 846, 24, 954, 286, 647, 129
         };
 
-        // Adiciona os números
         for (int numero : dados) {
             numeros.add(numero);
         }
@@ -76,7 +73,6 @@ public class QuickSort {
 
         long tempoMelhor = fimMelhor - inicioMelhor;
 
-        // ---------------- PIOR CASO ----------------
         ArrayList<Integer> piorCaso = new ArrayList<>(numeros);
 
         Collections.sort(piorCaso);
@@ -89,7 +85,6 @@ public class QuickSort {
 
         long tempoPior = fimPior - inicioPior;
 
-        // Exibe resultados
         JOptionPane.showMessageDialog(
             null,
             "MELHOR CASO (lista aleatória)\n"
@@ -101,7 +96,6 @@ public class QuickSort {
             + "Tempo: " + tempoPior + " ns"
         );
 
-        // Lista ordenada
         JOptionPane.showMessageDialog(
             null,
             "Lista ordenada:\n" + melhorCaso
