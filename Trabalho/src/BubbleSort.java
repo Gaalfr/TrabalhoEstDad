@@ -4,7 +4,6 @@ import javax.swing.JOptionPane;
 
 public class BubbleSort {
 
-    // Método Bubble Sort
     public static void bubbleSort(ArrayList<Integer> list) {
 
         int tamanho = list.size();
@@ -15,7 +14,6 @@ public class BubbleSort {
 
                 if (list.get(j) > list.get(j + 1)) {
 
-                    // Troca os elementos
                     int temp = list.get(j);
                     list.set(j, list.get(j + 1));
                     list.set(j + 1, temp);
@@ -41,12 +39,10 @@ public class BubbleSort {
             692, 993, 183, 553, 846, 24, 954, 286, 647, 129
         };
 
-        // Adiciona os números
         for (int numero : dados) {
             numeros.add(numero);
         }
 
-        // ---------------- MELHOR CASO ----------------
         ArrayList<Integer> melhorCaso = new ArrayList<>(numeros);
 
         Collections.sort(melhorCaso);
@@ -59,7 +55,6 @@ public class BubbleSort {
 
         long tempoMelhor = fimMelhor - inicioMelhor;
 
-        // ---------------- PIOR CASO ----------------
         ArrayList<Integer> piorCaso = new ArrayList<>(numeros);
 
         Collections.sort(piorCaso);
@@ -73,7 +68,6 @@ public class BubbleSort {
 
         long tempoPior = fimPior - inicioPior;
 
-        // Exibe resultados
         JOptionPane.showMessageDialog(
             null,
             "MELHOR CASO (lista já ordenada)\n"
@@ -85,7 +79,6 @@ public class BubbleSort {
             + "Tempo: " + tempoPior + " ns"
         );
 
-        // Exibe lista ordenada
         JOptionPane.showMessageDialog(
             null,
             "Lista ordenada com Bubble Sort:\n" + piorCaso
