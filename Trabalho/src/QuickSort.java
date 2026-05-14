@@ -60,7 +60,6 @@ public class QuickSort {
             numeros.add(numero);
         }
 
-        // ---------------- MELHOR CASO ----------------
         ArrayList<Integer> melhorCaso = new ArrayList<>(numeros);
 
         Collections.shuffle(melhorCaso);
